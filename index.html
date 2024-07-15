@@ -8,7 +8,7 @@
     /* CSS styles for the profile card */
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      background: linear-gradient(90deg, #497493 0%, #f69c3d 100%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -24,13 +24,15 @@
       text-align: center;
       max-width: 350px;
       width: 100%;
-      transition: transform 0.3s, box-shadow 0.3s;
+      /* Remove transition for profile card */
+      /* transition: transform 0.3s, box-shadow 0.3s; */
     }
 
-    .profile-card:hover {
+    /* Remove hover effect for profile card */
+    /* .profile-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
+    } */
 
     .profile-picture {
       width: 120px;
@@ -76,6 +78,9 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      width: 150px; /* Set width to the same value */
+      height: 50px; /* Set height to the same value */
+      justify-content: center; /* Center align text and icon */
     }
 
     .donation-buttons button:hover {
