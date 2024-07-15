@@ -66,7 +66,6 @@
     }
 
     .donation-buttons button {
-      background-color: #4CAF50;
       color: white;
       text-decoration: none;
       padding: 10px 20px;
@@ -83,8 +82,15 @@
       justify-content: center; /* Center align text and icon */
     }
 
+    #ethereum-btn {
+      background-color: #497493;
+    }
+
+    #bitcoin-btn {
+      background-color: #f69c3d;
+    }
+
     .donation-buttons button:hover {
-      background-color: #45a049;
       transform: translateY(-5px);
     }
 
@@ -96,13 +102,23 @@
     }
 
     .social-icons a {
-      color: #888;
       font-size: 24px;
       transition: color 0.3s ease, transform 0.3s;
     }
 
-    .social-icons a:hover {
+    .social-icons a.twitter {
+      color: #1DA1F2;
+    }
+
+    .social-icons a.github {
       color: #333;
+    }
+
+    .social-icons a.telegram {
+      color: #0088cc;
+    }
+
+    .social-icons a:hover {
       transform: scale(1.2);
     }
   </style>
@@ -119,9 +135,9 @@
       <button id="bitcoin-btn"><i class="fab fa-bitcoin"></i> Donate Bitcoin</button>
     </div>
     <div class="social-icons">
-      <a href="https://x.com/0xSekuja" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="https://github.com/sekuja" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://t.me/sekuja" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="https://x.com/0xSekuja" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/sekuja" target="_blank" class="github"><i class="fab fa-github"></i></a>
+      <a href="https://t.me/sekuja" target="_blank" class="telegram"><i class="fab fa-telegram"></i></a>
     </div>
   </div>
 
