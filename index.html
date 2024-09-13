@@ -5,17 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sekuja</title>
   <style>
-    /* CSS styles for the profile card */
+    /* General styles */
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(90deg, #497493 0%, #f69c3d 100%);
+      background: linear-gradient(90deg, #497493 30%, #f69c3d 100%);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
+      padding: 20px;
     }
 
+    /* Profile card styles */
     .profile-card {
       background-color: white;
       border-radius: 15px;
@@ -24,16 +26,10 @@
       text-align: center;
       max-width: 350px;
       width: 100%;
-      /* Remove transition for profile card */
-      /* transition: transform 0.3s, box-shadow 0.3s; */
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    /* Remove hover effect for profile card */
-    /* .profile-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    } */
-
+    /* Profile picture */
     .profile-picture {
       width: 120px;
       height: 120px;
@@ -47,6 +43,7 @@
       transform: scale(1.1);
     }
 
+    /* Heading */
     h1 {
       font-size: 26px;
       margin-bottom: 10px;
@@ -58,9 +55,10 @@
       font-size: 14px;
     }
 
+    /* Donation buttons */
     .donation-buttons {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       gap: 10px;
       margin-bottom: 20px;
     }
@@ -69,17 +67,16 @@
       color: white;
       text-decoration: none;
       padding: 10px 20px;
-      border-radius: 25px;
+      border-radius: 15px;
       border: none;
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.3s;
       font-size: 16px;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      width: 150px; /* Set width to the same value */
-      height: 50px; /* Set height to the same value */
-      justify-content: center; /* Center align text and icon */
+      width: 100%;
     }
 
     #ethereum-btn {
@@ -94,6 +91,7 @@
       transform: translateY(-5px);
     }
 
+    /* Social icons */
     .social-icons {
       display: flex;
       justify-content: center;
@@ -121,6 +119,25 @@
     .social-icons a:hover {
       transform: scale(1.2);
     }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .profile-card {
+        max-width: 100%;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      .donation-buttons button {
+        font-size: 14px;
+      }
+
+      .social-icons a {
+        font-size: 20px;
+      }
+    }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
@@ -128,11 +145,10 @@
   <div class="profile-card">
     <img src="images/profile-picture.jpg" alt="Profile Picture" class="profile-picture">
     <h1>Sekuja</h1>
-    <p>Full Stack Developer</p>
     <p>最大のリスクは、リスクを取らないこと... 急速に変化する世界において、失敗が確実な唯一の戦略は、リスクを取らないことである。</p>
     <div class="donation-buttons">
-      <button id="ethereum-btn"><i class="fab fa-ethereum"></i> Donate Ethereum</button>
-      <button id="bitcoin-btn"><i class="fab fa-bitcoin"></i> Donate Bitcoin</button>
+      <button id="ethereum-btn"><i class="fab fa-ethereum"></i> Tip via Ethereum</button>
+      <button id="bitcoin-btn"><i class="fab fa-bitcoin"></i> Tip via Bitcoin</button>
     </div>
     <div class="social-icons">
       <a href="https://x.com/0xSekuja" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
